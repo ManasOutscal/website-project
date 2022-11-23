@@ -1,0 +1,460 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.largebox {
+    max-width: 1500px;
+    display: block;
+    margin: auto;
+}
+
+header {
+    height: 330px;
+    background: url(/imgs/jobs\ in\ gaming\ industry.png);
+    background-size: 100vw 80vh;
+    background-position: 0 -22vh;
+    background-attachment: fixed;
+}
+
+.header {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%);
+    height: 330px;
+}
+
+.htitle {
+
+    color: white;
+    font-size: x-large;
+
+}
+
+.logo {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.1) 100%);
+}
+
+.logo img {
+    width: 150px;
+    margin: 10px 30px;
+}
+
+.mbox {
+    margin: 70px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.sbox {
+    margin: 0 0 50px 0;
+    display: flex;
+    max-width: 700px;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+    background-color: #e8e8e8;
+}
+
+.srbox {
+    max-width: 500px;
+
+}
+
+.linebox {
+    height: 100px;
+    background-color: rgb(179, 179, 179);
+    width: 2px;
+}
+
+.srubox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.srutitle {
+    line-height: 1;
+}
+
+.sruimg img {
+    width: 90px;
+}
+
+.slboxlink {
+    display: flex;
+    justify-content: space-between;
+    background-color: #154314;
+    color: white;
+    text-decoration: none;
+    width: 120px;
+    padding: 5px 10px;
+    margin: 0 10px;
+    border-radius: 50px;
+    text-align: center;
+    align-items: center;
+}
+
+.lbox {
+    background-color: #e8e8e8;
+    width: 300px;
+    padding: 0 20px;
+    margin-bottom: 50px;
+    list-style: none;
+    line-height: 2;
+}
+
+.npage {
+    padding: 10px 15px;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.active {
+    background-color: #f74a58;
+    color: white;
+}
+
+.footer {
+    background-color: #e8e8e8;
+    margin: 70px;
+    padding: 10px;
+    max-width: 1500px;
+}
+
+.flinks {
+    display: flex;
+    text-align: justify;
+    flex-wrap: wrap;
+    line-height: 2;
+}
+
+.ftitle {
+    margin: 5px;
+}
+
+.sflink {
+    margin: 0 5px;
+    color: black;
+    text-decoration: none;
+}
+
+.linkimg img {
+    margin-top: 5px;
+    width: 30px;
+}
+
+.details-cut {
+    --max-lines: 4;
+
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--max-lines);
+
+}
+
+@media (max-width:1200px) {
+    header {
+        height: 250px;
+        background: url(/imgs/jobs\ in\ gaming\ industry.png);
+        background-size: 100vw 80vh;
+        background-position: 0 -22vh;
+        background-attachment: fixed;
+    }
+
+    .header {
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%);
+        height: 250px;
+    }
+
+    .htitle {
+
+        color: white;
+        font-size: large;
+
+    }
+
+    .mbox {
+        margin: 20px 10px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .sbox {
+        margin: 0 0 50px 0;
+        display: flex;
+        max-width: 570px;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 10px;
+        background-color: #e8e8e8;
+    }
+
+    .srbox {
+        max-width: 500px;
+
+    }
+
+    .slboxlink {
+        display: flex;
+        justify-content: space-between;
+        background-color: #154314;
+        color: white;
+        text-decoration: none;
+        width: 100px;
+        padding: 10px;
+        margin: 0 10px;
+        border-radius: 50px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .sruimg img {
+        width: 70px;
+    }
+
+    .linkimg img {
+        width: 20px;
+    }
+}
+
+@media (max-width:955px) {
+    .htitle {
+
+        color: white;
+        font-size: medium;
+
+    }
+
+    .mbox {
+        margin: 20px 10px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .sbox {
+        margin: 0 0 50px 0;
+        display: flex;
+        max-width: 570px;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 10px;
+        background-color: #e8e8e8;
+    }
+
+    .srbox {
+        max-width: 500px;
+
+    }
+
+    .slboxlink {
+        display: flex;
+        justify-content: space-between;
+        background-color: #154314;
+        color: white;
+        text-decoration: none;
+        width: 100px;
+        padding: 10px;
+        margin: 0 10px;
+        border-radius: 50px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .sruimg img {
+        width: 70px;
+    }
+
+    .linkimg img {
+        width: 20px;
+    }
+
+    .lbox {
+        margin: 30px 0 0 0;
+        width: 550px;
+    }
+}
+
+@media (max-width:610px) {
+    header {
+        height: 220px;
+        background: url(/imgs/jobs\ in\ gaming\ industry.png);
+        background-size: 100vw 80vh;
+        background-position: 0 -22vh;
+        background-attachment: fixed;
+    }
+
+    .header {
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%);
+        height: 220px;
+    }
+
+    .htitle {
+        position: relative;
+        top: -10px;
+        color: white;
+        font-size: small;
+
+    }
+
+    .rbox,
+    .lbox,
+    .footer {
+        font-size: x-small;
+    }
+
+    .lbox {
+        font-size: x-small;
+    }
+
+    .mbox {
+        margin: 20px 10px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .sbox {
+        margin: 0 0 50px 0;
+        display: flex;
+        max-width: 570px;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 10px;
+        background-color: #e8e8e8;
+    }
+
+    .srbox {
+        max-width: 500px;
+
+    }
+
+    .slboxlink {
+        display: flex;
+        justify-content: space-between;
+        background-color: #154314;
+        color: white;
+        text-decoration: none;
+        width: 70px;
+        padding: 10px;
+        margin: 0 10px;
+        border-radius: 50px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .sruimg img {
+        width: 50px;
+    }
+
+    .linkimg img {
+        width: 20px;
+    }
+
+    .lbox {
+        margin: 30px 0 0 0;
+        width: 550px;
+    }
+
+    .footer {
+        background-color: #e8e8e8;
+        margin: 10px;
+        padding: 10px;
+    }
+}
+
+@media (max-width:450px) {
+    header {
+        height: 180px;
+        background: url(/imgs/jobs\ in\ gaming\ industry.png);
+        background-size: 100vw 80vh;
+        background-position: 0 -22vh;
+        background-attachment: fixed;
+    }
+
+    .header {
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%);
+        height: 180px;
+    }
+
+    .htitle {
+        position: relative;
+        top: -10px;
+        color: white;
+        font-size: x-small;
+
+    }
+
+    .rbox {
+        font-size: xx-small;
+    }
+
+    .mbox {
+        margin: 20px 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .sbox {
+        margin: 0 0 50px 0;
+        display: flex;
+        max-width: 570px;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 5px;
+        background-color: #e8e8e8;
+    }
+
+    .srbox {
+        max-width: 500px;
+
+    }
+
+    .slboxlink {
+        display: flex;
+        justify-content: space-between;
+        background-color: #154314;
+        color: white;
+        text-decoration: none;
+        width: 70px;
+        padding: 5px;
+        margin: 0 10px;
+        border-radius: 50px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .sruimg img {
+        width: 40px;
+    }
+
+    .linkimg img {
+        width: 15px;
+    }
+
+    .lbox {
+        margin: 30px 0 0 0;
+        width: 550px;
+    }
+
+    .next {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .srutitle {
+        line-height: 1;
+    }
+
+    .footer {
+        background-color: #e8e8e8;
+        margin: 0px;
+        padding: 10px;
+    }
+
+
+}

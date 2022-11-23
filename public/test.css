@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    max-width: 1100px;
+}
+
+.box {
+    max-width: 400px;
+}
+
+.box a {
+    text-decoration: none;
+    color: black;
+    max-width: 400px;
+    margin: 10px;
+
+}
+
+a .sbox {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 400px;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0;
+}
