@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/stylej.css">
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="logo"><a href="/"><img src="/imgs/outscal logo.png" alt="outscal logo"></a></div>
+            <div class="mtitle">
+                <div class="htitle">
+                    <div class="sruimg"><img src="<%= pobj.Logo_link %>" alt=""></div>
+                    <div class="shtitle">
+                        <p>
+                            <%= pobj.Company %>
+                        </p>
+                        <h1>
+                            <%= pobj.Job_title %>
+                        </h1>
+                        <div class="tags">
+                            <div class="prog">
+                                <img src="/imgs/tag.png" alt="" class="tag">
+                                <p>
+                                    <%= pobj.Department_1 %>
+                                        <%= pobj.Department_2 %>
+                                </p>
+                            </div>
+                            <div class="locat">
+                                <img src="/imgs/save.png" alt="" class="save">
+                                <p>
+                                    <%= pobj.City_Remote %>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="happly">
+                    <a href=""><b>Apply Now</b></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="largebox">
+        <div class="mbox">
+            <div class="rbox">
+                <div class="sbox">
+                    <div class="srbox">
+                        <div class="srdbox">
+                            <h2>Job Description</h2>
+                            <p class="pred">
+                                <% let obj=(pobj.Job_Description) %>
+                                    <%= obj %>
+                            </p>
+                            <br><b <center>
+                                <div class="next">
+                                    <a href="" class="startapp"><b> Start Application</b></a>
+                                </div>
+                                </center>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="lbox">
+                <div class="lboxtitle">
+                    <h3>Other Jobs in <%= pobj.City_Remote %>
+                    </h3>
+                </div>
+                <div class="lboxlist">
+                    <%data2.forEach((d)=>{%>
+                        <li><a href="/jobs/page/<%= d._id %>">
+                                <%= d.Job_title %> jobs in <%= d.City_Remote %>
+                            </a></li>
+                        <%})%>
+                </div>
+            </div>
+        </div>
+        <center>
+            <footer>
+                <div class="footer">
+                    <h2>
+                        Other Jobs In <%= pobj.Company %>
+                    </h2>
+                    <%data3.forEach((d)=>{%>
+                        <div class="sbox">
+                            <div class="srbox">
+                                <div class="srubox">
+                                    <div class="sruimg"><img src=<%=d.Logo_link %> alt=""></div>
+                                    <div class="srutitle">
+                                        <h3>
+                                            <%= d.Job_title %> in <%= d.Company %>
+                                        </h3>
+                                        <h4>Requires Skils: OPPS, Unity, C++</h4>
+                                        <p>Jobs available in <%= d.City_Remote %>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="srdbox">
+                                    <p class="details-cut">
+                                        <%= d.Job_Description %>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="linebox"></div>
+                            <div class="slbox">
+                                <a class="slboxlink" href="/jobs/page/<%= d._id %>">
+                                    <div class="linktext">Apply Now</div>
+                                    <div class="linkimg"><img src="/imgs/arrow.png" alt=""></div>
+                                </a>
+                            </div>
+                        </div>
+                        <%})%>
+                            <a href="/jobs/companies/jobs-in-<%= pobj.Company %>" class="lmore"><b>Load More</b></a>
+                </div>
+            </footer>
+        </center>
+    </div>
+</body>
+
+</html>

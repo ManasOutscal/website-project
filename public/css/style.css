@@ -30,6 +30,11 @@ header {
 
 }
 
+.htitle h1 {
+    text-transform: capitalize;
+
+}
+
 .logo {
     background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.1) 100%);
 }
@@ -49,7 +54,7 @@ header {
 .sbox {
     margin: 0 0 50px 0;
     display: flex;
-    max-width: 700px;
+    max-width: 800px;
     align-items: center;
     justify-content: space-evenly;
     padding: 10px;
@@ -57,7 +62,7 @@ header {
 }
 
 .srbox {
-    max-width: 500px;
+    max-width: 600px;
 
 }
 
@@ -69,16 +74,22 @@ header {
 
 .srubox {
     display: flex;
-    justify-content: space-between;
 }
 
 .srutitle {
+    position: relative;
+    top: -10px;
     line-height: 1;
 }
 
 .sruimg img {
+    margin: 5px;
     width: 90px;
 }
+
+/* .srdbox p {
+    line-height: 2;
+} */
 
 .slboxlink {
     display: flex;
@@ -103,11 +114,30 @@ header {
     line-height: 2;
 }
 
+.lbox li a {
+    text-decoration: none;
+    color: black;
+}
+
+h3,
+h2 {
+    text-transform: capitalize;
+}
+
+.next {
+    max-width: 700px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .npage {
     padding: 10px 15px;
     color: black;
     text-decoration: none;
     border-radius: 5px;
+    background-color: #f74a58;
+    margin: 5px;
+    color: white;
 }
 
 .active {

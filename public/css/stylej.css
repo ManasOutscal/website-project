@@ -1,0 +1,285 @@
+.htitle {
+    margin: 20px 40px;
+    display: flex;
+    max-width: 900px;
+}
+
+.mtitle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.happly {
+    margin: 70px;
+}
+
+.shtitle h1,
+h2,
+.shtitle p,
+.tags {
+    margin: 0 5px 0 20px;
+    padding: 0;
+}
+
+.tags {
+    display: flex;
+}
+
+.prog,
+.locat {
+    display: flex;
+    /* text-align: center; */
+    align-items: center;
+}
+
+
+.tag,
+.save {
+    width: 40px;
+}
+
+.happly a {
+    text-decoration: none;
+    color: black;
+    padding: 25px 70px;
+    border-radius: 50px;
+    font-size: x-large;
+    background-color: #f8cf2c;
+}
+
+.sbox {
+    margin: 0;
+    display: flex;
+    max-width: 700px;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+    background-color: #e8e8e8;
+}
+
+.srbox {
+    max-width: 700px;
+    padding: 20px;
+
+}
+
+.startapp {
+    font-size: x-large;
+    text-decoration: none;
+    color: white;
+    background-color: #154314;
+    padding: 20px 31px;
+    border-radius: 10px;
+}
+
+.footer {
+    padding: 30px;
+}
+
+.footer .sbox {
+    max-width: 700px;
+    background-color: #fff;
+    margin: 30px 0;
+}
+
+.lmore {
+    text-decoration: none;
+    color: #fff;
+    background-color: #9d7109;
+    padding: 20px 40px;
+    border-radius: 50px;
+}
+
+.pred {
+    width: 700px;
+    white-space: pre-wrap;
+}
+
+@media (max-width:1400px) {
+    .htitle {
+        margin: 20px 40px;
+        display: flex;
+        max-width: 700px;
+
+        color: white;
+        font-size: large;
+    }
+
+
+    .sbox {
+        margin: 0;
+        display: flex;
+        max-width: 570px;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 10px;
+        background-color: #e8e8e8;
+    }
+
+    .srbox {
+        max-width: 570px;
+        padding: 20px;
+
+    }
+
+    .htitle {
+        margin: 40px 0 40px 40px;
+        display: flex;
+    }
+
+    .happly a {
+        text-decoration: none;
+        color: black;
+        padding: 15px 45px;
+        border-radius: 50px;
+        font-size: x-large;
+        background-color: #f8cf2c;
+    }
+
+    .happly {
+        margin: 70px 10px 70px 0;
+    }
+
+    .tag,
+    .save {
+        width: 30px;
+    }
+
+}
+
+@media (max-width:1200px) {
+    header {
+        height: 330px;
+        background: url(/imgs/jobs\ in\ gaming\ industry.png);
+        background-size: 100vw 80vh;
+        background-position: 0 -22vh;
+        background-attachment: fixed;
+    }
+
+    .header {
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%);
+        height: 330px;
+    }
+
+    .htitle {
+        margin: 20px 0 20px 20px;
+        display: flex;
+        max-width: 500px;
+    }
+
+}
+
+@media (max-width:745px) {
+    .htitle {
+        margin: 20px 0 0 0;
+        display: flex;
+    }
+
+    .happly {
+        margin: 50px 0px 70px 0;
+    }
+}
+
+@media (max-width:717px) {
+    .mtitle {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .htitle {
+        margin: 20px 0 0 0;
+        display: flex;
+    }
+
+    .happly {
+        margin: 12px 70px 70px 60px;
+    }
+
+    .happly a {
+        text-decoration: none;
+        color: black;
+        padding: 10px 35px;
+        border-radius: 50px;
+        font-size: x-large;
+        background-color: #f8cf2c;
+    }
+
+    .footer {
+        margin: 0;
+        padding: 30px 0;
+    }
+
+    .startapp {
+        font-size: large;
+        text-decoration: none;
+        color: white;
+        background-color: #154314;
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width:450px) {
+    header {
+        height: 280px;
+        background: url(/imgs/jobs\ in\ gaming\ industry.png);
+        background-size: 100vw 80vh;
+        background-position: 0 -22vh;
+        background-attachment: fixed;
+    }
+
+    .header {
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%);
+        height: 280px;
+    }
+
+    .htitle {
+        margin: 20px 0 0 0;
+        display: flex;
+        font-size: smaller;
+    }
+
+    .happly {
+        margin: 50px 0px 70px 0;
+    }
+
+    .tag,
+    .save {
+        width: 20px;
+    }
+
+    .mtitle {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .htitle {
+        margin: 20px 0 0 0;
+        display: flex;
+    }
+
+    .happly {
+        margin: 5px 70px 70px 60px;
+    }
+
+    .happly a {
+        text-decoration: none;
+        color: black;
+        padding: 5px 20px;
+        border-radius: 50px;
+        font-size: large;
+        background-color: #f8cf2c;
+    }
+
+    .startapp {
+        font-size: medium;
+        text-decoration: none;
+        color: white;
+        background-color: #154314;
+        padding: 5px 10px;
+        border-radius: 10px;
+    }
+}

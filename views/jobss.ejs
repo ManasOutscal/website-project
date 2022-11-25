@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>
+        <%= jobtitle %> jobs in <%= citytitle %>
+    </title>
+    <meta name="title"
+        content="Find high paying <%= jobtitle %> jobs in <%= citytitle %> in 1000+ start-ups and AAA studios. Get direct introduction with top gaming companies for <%= jobtitle %> roles in <%= citytitle %>">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
@@ -15,11 +19,14 @@
             <div class="logo"><a href="/"><img src="/imgs/outscal logo.png" alt="outscal logo"></a></div>
             <center>
                 <div class="htitle">
-                    <h1>Unity Developer Jobs in <%= data.City_Formula %>
+                    <h1>
+                        <%= jobtitle %> Jobs in <%= citytitle %>
                     </h1>
                     <p>Want to level up you career? view the best jobs and apply <br>
                         to top jobs in the gaming industry</p>
-                    <h2>Showing 1-10 out of 2227 Unity Developer Jobs In Bangalore</h2>
+                    <h2>Showing <%=numberdata + 1%>-<%= numberdata + data.length %> out of <%= datanumber %>
+                                    <%= jobtitle %> Jobs in <%= citytitle %>
+                    </h2>
                 </div>
             </center>
         </div>
@@ -31,25 +38,25 @@
                     <div class="sbox">
                         <div class="srbox">
                             <div class="srubox">
-                                <div class="sruimg"><img src="/imgs/1.png" alt=""></div>
+                                <div class="sruimg"><img src=<%=d.Logo_link%> alt=""></div>
                                 <div class="srutitle">
                                     <h3>
-                                        <%= d.Position %> in <%= d.Company %>
+                                        <%= d.Job_title %> in <%= d.Company %>
                                     </h3>
                                     <h4>Requires Skils: OPPS, Unity, C++</h4>
-                                    <p>Jobs available in <%= d.City_Formula %>
+                                    <p>Jobs available in <%= d.City_Remote %>
                                     </p>
                                 </div>
                             </div>
                             <div class="srdbox">
                                 <p class="details-cut">
-                                    <%= d.Details %>
+                                    <%= d.Job_Description %>
                                 </p>
                             </div>
                         </div>
                         <div class="linebox"></div>
                         <div class="slbox">
-                            <a class="slboxlink" href="">
+                            <a class="slboxlink" href="/jobs/page/<%= d._id %>">
                                 <div class="linktext">Apply Now</div>
                                 <div class="linkimg"><img src="/imgs/arrow.png" alt=""></div>
                             </a>
@@ -57,106 +64,73 @@
                     </div>
                     <%})%>
                         <div class="next">
-                            <a href="" class="npage active">1</a>
-                            <a href="" class="npage">2</a>
-                            <a href="" class="npage">3</a>
-                            <a href="" class="npage">4</a>
-                            <a href="" class="npage">5</a>
-                            <a href="" class="npage">6</a>
-                            <a href="" class="npage">7</a>
-                            <a href="" class="npage">8</a>
-                            <a href="" class="npage">9</a>
-                            <a href="" class="npage">10</a>
-                            <a href="" class="npage">Next >></a>
+                            <% if (jobtitle!="" ){%>
+                                <% if(page> 1) { %>
+                                    <a href="/jobs/<%= jobtitle %>-jobs-in-<%= citytitle %>?page=<%= page-1 %>"
+                                        class="npage">Back</a>
+                                    <% } %>
+                                        <a href="/jobs/<%= jobtitle %>-jobs-in-<%= citytitle %>?page=1"
+                                            class="npage">First</a>
+                                        <% for(let i=page; i <=numberofPages; i++) { %>
+                                            <a href="/jobs/<%= jobtitle %>-jobs-in-<%= citytitle %>?page=<%=i%>"
+                                                class="npage">
+                                                <%= i %>
+                                            </a>
+                                            <% } %>
+                                                <% if(page < numberofPages) { %>
+                                                    <a href="/jobs/<%= jobtitle %>-jobs-in-<%= citytitle %>?page=<%= page+1 %>"
+                                                        class="npage">Next</a>
+                                                    <% } %>
+                                                        <% } else{ %>
+                                                            <% if(page> 1) { %>
+                                                                <a href="/jobs/jobs-in-<%= citytitle %>?page=<%= page-1 %>"
+                                                                    class="npage">Back</a>
+                                                                <% } %>
+                                                                    <a href="/jobs/jobs-in-<%= citytitle %>?page=1"
+                                                                        class="npage">First</a>
+                                                                    <% for(let i=page; i <=numberofPages; i++) { %>
+                                                                        <a href="/jobs/jobs-in-<%= citytitle %>?page=<%=i%>"
+                                                                            class="npage">
+                                                                            <%= i %>
+                                                                        </a>
+                                                                        <% } %>
+                                                                            <% if(page < numberofPages) { %>
+                                                                                <a href="/jobs/jobs-in-<%= citytitle %>?page=<%= page+1 %>"
+                                                                                    class="npage">Next</a>
+                                                                                <% } %>
+
+                                                                                    <% } %>
                         </div>
             </div>
             <div class="lbox">
                 <div class="lboxtitle">
-                    <h3>Other Gaming Jobs in Bangalore</h3>
+                    <h3>Other Gaming Jobs in <%= citytitle %>
+                    </h3>
                 </div>
                 <div class="lboxlist">
-                    <li>Game Designer Jobs In Bangalore</li>
-                    <li>Game Designer Jobs In Bangalore</li>
-                    <li>Game Designer Jobs In Bangalore</li>
-                    <li>Game Designer Jobs In Bangalore</li>
-                    <li>Game Designer Jobs In Bangalore</li>
-                    <li>Game Designer Jobs In Bangalore</li>
-                    <li>Game Designer Jobs In Bangalore</li>
-                    <li>Game Designer Jobs In Bangalore</li>
-                    <li>Game Designer Jobs In Bangalore</li>
-                    <li>Game Designer Jobs In Bangalore</li>
+                    <%data2.forEach((d)=>{%>
+                        <li><a href="/jobs/page/<%= d._id %>">
+                                <%= d.Job_title %> jobs in <%= d.City_Remote %>
+                            </a></li>
+                        <%})%>
                 </div>
             </div>
         </div>
         <footer>
             <div class="footer">
                 <div class="ftitle">
-                    <h3>Unity Developer Jobs in Across the Globe</h3>
+                    <h3>
+                        <%= jobtitle %> Jobs in Across the Globe
+                    </h3>
                 </div>
                 <div class="flinks">
-                    <div class="flink">
-                        <a href="" class="sflink">Unity Developers In Delhi</a> |
-                    </div>
-                    <div class="flink">
-                        <a href="" class="sflink">Unity Developers In Delhi</a> |
-                    </div>
-                    <div class="flink">
-                        <a href="" class="sflink">Unity Developers In Delhi</a> |
-                    </div>
-                    <div class="flink">
-                        <a href="" class="sflink">Unity Developers In Delhi</a> |
-                    </div>
-                    <div class="flink">
-                        <a href="" class="sflink">Unity Developers In Delhi</a> |
-                    </div>
-                    <div class="flink">
-                        <a href="" class="sflink">Unity Developers In Delhi</a> |
-                    </div>
-                    <div class="flink">
-                        <a href="" class="sflink">Unity Developers In Delhi</a> |
-                    </div>
-                    <div class="flink">
-                        <a href="" class="sflink">Unity Developers In Delhi</a> |
-                    </div>
-                    <div class="flink">
-                        <a href="" class="sflink">Unity Developers In Delhi</a> |
-                    </div>
-                    <div class="flink">
-                        <a href="" class="sflink">Unity Developers In Delhi</a> |
-                    </div>
-                    <div class="flink">
-                        <a href="" class="sflink">Unity Developers In Delhi</a> |
-                    </div>
-                    <div class="flink">
-                        <a href="" class="sflink">Unity Developers In Delhi</a> |
-                    </div>
-                    <div class="flink">
-                        <a href="" class="sflink">Unity Developers In Delhi</a> |
-                    </div>
-                    <div class="flink">
-                        <a href="" class="sflink">Unity Developers In Delhi</a> |
-                    </div>
-                    <div class="flink">
-                        <a href="" class="sflink">Unity Developers In Delhi</a> |
-                    </div>
-                    <div class="flink">
-                        <a href="" class="sflink">Unity Developers In Delhi</a> |
-                    </div>
-                    <div class="flink">
-                        <a href="" class="sflink">Unity Developers In Delhi</a> |
-                    </div>
-                    <div class="flink">
-                        <a href="" class="sflink">Unity Developers In Delhi</a> |
-                    </div>
-                    <div class="flink">
-                        <a href="" class="sflink">Unity Developers In Delhi</a> |
-                    </div>
-                    <div class="flink">
-                        <a href="" class="sflink">Unity Developers In Delhi</a> |
-                    </div>
-                    <div class="flink">
-                        <a href="" class="sflink">Unity Developers In Delhi</a> |
-                    </div>
+                    <%data3.forEach((d)=>{%>
+                        <div class="flink">
+                            <a href="/jobs/page/<%= d._id %>" class="sflink">
+                                <%= d.Job_title %> jobs in <%= d.City_Remote %>
+                            </a> |
+                        </div>
+                        <%})%>
                 </div>
             </div>
         </footer>
