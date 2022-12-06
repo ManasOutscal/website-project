@@ -5,9 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-
-    <link rel="stylesheet" href="/css/style.css">
+    <title>
+        <%= pobj.Job_title %> jobs in <%= pobj.Company %>
+    </title>
+    <meta name="title"
+        content="Find high paying <%= pobj.Job_title %> jobs in <%= pobj.Company %> in 1000+ start-ups and AAA studios. Get direct introduction with top gaming companies for <%= pobj.Job_title %> roles in<%= pobj.Company %>">
+    <link rel=" stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/stylej.css">
 </head>
 
@@ -17,7 +20,7 @@
             <div class="logo"><a href="/"><img src="/imgs/outscal logo.png" alt="outscal logo"></a></div>
             <div class="mtitle">
                 <div class="htitle">
-                    <div class="sruimg"><img src="<%= pobj.Logo_link %>" alt=""></div>
+                    <div class="sruimg"><img src="<%= pobj.Logo_link %>" alt="Career in <%= pobj.Company %>"></div>
                     <div class="shtitle">
                         <p>
                             <%= pobj.Company %>
@@ -43,7 +46,9 @@
                     </div>
                 </div>
                 <div class="happly">
-                    <a href=""><b>Apply Now</b></a>
+                    <a
+                        href="https://academy.outscal.com/auth/signup?utm_source=SEO-static&utm_medium=global&utm_content=recLrj6Nt5wpon0V5&utm_term=rec3o1HVX8FZ8XGNy"><b>Apply
+                            Now</b></a>
                 </div>
             </div>
         </div>
@@ -61,7 +66,8 @@
                             </p>
                             <br><b <center>
                                 <div class="next">
-                                    <a href="" class="startapp"><b> Start Application</b></a>
+                                    <a href="https://academy.outscal.com/auth/signup?utm_source=SEO-static&utm_medium=global&utm_content=recLrj6Nt5wpon0V5&utm_term=rec3o1HVX8FZ8XGNy"
+                                        class="startapp"><b> Start Application</b></a>
                                 </div>
                                 </center>
                         </div>
@@ -99,14 +105,12 @@
                                             <%= d.Job_title %> in <%= d.Company %>
                                         </h3>
                                         <h4>Requires Skils: OPPS, Unity, C++</h4>
-                                        <p>Jobs available in <%= d.City_Remote %>
+                                        <p>
+                                            <%= d.City_Remote %>
                                         </p>
                                     </div>
                                 </div>
                                 <div class="srdbox">
-                                    <p class="details-cut">
-                                        <%= d.Job_Description %>
-                                    </p>
                                 </div>
                             </div>
                             <div class="linebox"></div>
@@ -118,7 +122,7 @@
                             </div>
                         </div>
                         <%})%>
-                            <a href="/jobs/companies/jobs-in-<%= pobj.Company %>" class="lmore"><b>Load More</b></a>
+                            <a href="/jobs/jobs-in-<%= pobj.Company %>" class="lmore"><b>Load More</b></a>
                 </div>
             </footer>
         </center>

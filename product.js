@@ -12,4 +12,4 @@ const productSchema= mongoose.Schema({
     Department_with_Gaming:String
 });
 
-module.exports= mongoose.model("Job",productSchema);
+module.exports= mongoose.model("job",productSchema);

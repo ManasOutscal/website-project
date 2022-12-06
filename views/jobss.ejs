@@ -38,7 +38,7 @@
                     <div class="sbox">
                         <div class="srbox">
                             <div class="srubox">
-                                <div class="sruimg"><img src=<%=d.Logo_link%> alt=""></div>
+                                <div class="sruimg"><img src=<%=d.Logo_link%> alt="Career in <%= d.Company %>"></div>
                                 <div class="srutitle">
                                     <h3>
                                         <%= d.Job_title %> in <%= d.Company %>
@@ -71,7 +71,7 @@
                                     <% } %>
                                         <a href="/jobs/<%= jobtitle %>-jobs-in-<%= citytitle %>?page=1"
                                             class="npage">First</a>
-                                        <% for(let i=page; i <=numberofPages; i++) { %>
+                                        <% for(let i=page; i <=page+6 && i<=numberofPages; i++) { %>
                                             <a href="/jobs/<%= jobtitle %>-jobs-in-<%= citytitle %>?page=<%=i%>"
                                                 class="npage">
                                                 <%= i %>
@@ -88,7 +88,8 @@
                                                                 <% } %>
                                                                     <a href="/jobs/jobs-in-<%= citytitle %>?page=1"
                                                                         class="npage">First</a>
-                                                                    <% for(let i=page; i <=numberofPages; i++) { %>
+                                                                    <% for(let i=page; i <=page+6 && i<=numberofPages;
+                                                                        i++) { %>
                                                                         <a href="/jobs/jobs-in-<%= citytitle %>?page=<%=i%>"
                                                                             class="npage">
                                                                             <%= i %>

@@ -1,2 +1,2 @@
 const mongoose = require('mongoose');
-mongoose.connect("mongodb://localhost:27017/yr");
+mongoose.connect("mongodb://dev:dev1@ac-aqmnxbp-shard-00-00.tbrseb7.mongodb.net:27017,ac-aqmnxbp-shard-00-01.tbrseb7.mongodb.net:27017,ac-aqmnxbp-shard-00-02.tbrseb7.mongodb.net:27017/?ssl=true&replicaSet=atlas-1128z8-shard-0&authSource=admin&retryWrites=true&w=majority/test");
